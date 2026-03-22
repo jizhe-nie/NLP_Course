@@ -1,0 +1,26 @@
+# === 深度学习核心框架 ===
+torch
+
+# === 数据处理与机器学习基础 ===
+pandas
+numpy
+scikit-learn
+
+# === 传统 NLP (分词与词向量) ===
+jieba
+gensim
+
+# === 现代 NLP 大模型 (HuggingFace生态) ===
+transformers
+datasets
+accelerate
+
+# === 进度条工具 ===
+tqdm
+
+# === 数据可视化与图表绘制 ===
+matplotlib
+seaborn
+
+# === Web 前端可视化界面 ===
+gradio

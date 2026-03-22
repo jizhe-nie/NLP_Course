@@ -192,7 +192,22 @@ def main():
     print(f"召回率 (Recall)   : {recall:.4f}")
     print(f"F1 Score        : {f1:.4f}")
     print("-" * 30)
+    # ================= 新增：保存 LSTM 模型与词表 =================
+    import pickle
+    print("\n正在打包保存 LSTM 模型与词表，准备接入可视化界面...")
 
+    # 将模型结构所需的所有关键组件打包成一个字典
+    save_data = {
+        'word2idx': word2idx,
+        'embedding_matrix': embedding_matrix,
+        'state_dict': model.state_dict()  # 神经网络的权重参数
+    }
+
+    # 保存为单独的文件，方便 Git 同步和跨平台读取
+    with open('lstm_saved_model.pkl', 'wb') as f:
+        pickle.dump(save_data, f)
+
+    print("✅ LSTM 模型已成功保存为 lstm_saved_model.pkl !")
 
 if __name__ == "__main__":
     main()

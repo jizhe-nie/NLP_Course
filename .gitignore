@@ -1,81 +1,17 @@
-# Byte-compiled / optimized / DLL files
+# 忽略系统缓存与IDE配置
+.DS_Store
+.idea/
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
+# 忽略虚拟环境
 venv/
 env/
-ENV/
-.venv
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# 忽略大模型权重文件夹 (但保留你打包的 LSTM 权重文件)
+results_*/
+logs_*/
+checkpoint-*/
 
-# Python runtime
-*.pyc
-*.pyo
-*.pyd
-
-# macOS system files
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-.AppleDB
-.AppleDesktop
-
-# IDE / editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.~lock.*
-
-# Data files (customize based on your actual files)
-*.txt       # 如果 .txt 文件是原始数据且不应提交
-*.csv       # 如果有 CSV 文件
-*.pkl       # 如果保存了模型
-*.npy
-*.npz
-
-# Logs and databases
+# 忽略运行过程中可能产生的零碎文件
 *.log
-*.sqlite
-*.db
-
-# Local environment variables
-.env
-.env.local
-.env.*.local
-
-# Optional: project-specific
-data/       # 如果你将数据放在 data/ 文件夹下
-outputs/
-results/
